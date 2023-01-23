@@ -1,39 +1,38 @@
-.App {
-  text-align: center;
-}
+body{
+  margin: 0;
+  padding:0;
+  background: #DC2424;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #4A569D, #DC2424);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #4A569D, #DC2424); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+font-family: 'Ubuntu', sans-serif !important;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+td, th{
+  font-size: 14px;
+  cursor: pointer;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.1) !important;
 }
-
-.App-header {
-  min-height: 100vh;
+tr:hover td{
+  color: #fff !important;
+}
+p{
+  font-size: 17px;
+  color:#fff;
+}
+h1 {
+  font-size: 25px !important;
+  font-weight: bold !important;
+  color:#fff;
+}
+header{
+  background-color: #3a2f66;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0 0 20px #494949;
+}
+.appWrapper{
+  margin: 0 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-}
-
-.App-link {
-  color: rgb(112, 76, 182);
-}
-
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+  justify-content: space-between;
 }

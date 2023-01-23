@@ -1,0 +1,11 @@
+.productListArea{
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    overflow-y: auto;
+}
+.productImage{
+    max-height: 60px;
+    border-radius: 6px;
+    border: 1px solid #a9a9a9;
+}
