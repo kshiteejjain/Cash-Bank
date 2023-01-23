@@ -42,7 +42,7 @@ const Calculation = () => {
                     <Button variant="warning" onClick={checkValue}>Check Now</Button>
                     <div className='returnValue'>
                         {returnValue && productPrice < val ? <label>Amount to Return: <span> {returnValue}</span> </label> : null}
-                        {returnValue && productPrice > val ? <p> wash dishes </p> : null}
+                        {returnValue && productPrice > val ? <p style={{fontSize: 20}}> give more money &#128515;</p> : null}
                     </div>
                     
                 </div>
