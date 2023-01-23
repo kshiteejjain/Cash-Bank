@@ -4,7 +4,4 @@ This is the POC project where you can select your product from left side product
 
 
 ### Screenshot 
-https://github.com/kshiteejjain/cash-bank/blob/main/src/app/assets/app%20screenshot.png
-
-### Demo Video
-https://github.com/kshiteejjain/cash-bank/blob/main/src/app/assets/demo.mov
+<img width="1791" alt="app screenshot" src="https://user-images.githubusercontent.com/10721667/213973868-28e6afc4-e30b-47be-86a3-6561b7c3d353.png">
