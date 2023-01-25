@@ -22,7 +22,7 @@ const Calculation = () => {
     
     useEffect(() => {
         setProductPrice(selectedProduct.reduce(sumOfPricing, 0));
-        setReturnValue(val - productPrice);
+        setReturnValue((prev) => prev = val - productPrice);
         return;
     }, [productPrice, selectedProduct, val])
 
