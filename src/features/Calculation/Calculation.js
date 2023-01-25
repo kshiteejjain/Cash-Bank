@@ -6,22 +6,27 @@ import './Calculation.css'
 
 const Calculation = () => {
 
-    const { selectedProduct } = useSelector(state => ({
-        selectedProduct: state.productListReducer.selectedProduct
-    }));
     const [productPrice, setProductPrice] = useState();
     const [val, setValue] = useState();
     const [returnValue, setReturnValue] = useState();
 
-    useEffect(() => {
-        setProductPrice(selectedProduct)
+    const { selectedProduct } = useSelector(state => ({
+        selectedProduct: state.productListReducer.selectedProduct, 
+    }));
 
-    }, [selectedProduct])
+    const sumOfPricing = (a, b) => a + b;
 
-    const checkValue = () => {
-        setReturnValue(val - productPrice)
+    const reset = () => {
+        window.location.reload()
     }
+    
+    useEffect(() => {
+        setProductPrice(selectedProduct.reduce(sumOfPricing, 0));
+        setReturnValue(val - productPrice);
+        return;
+    }, [productPrice, selectedProduct, val])
 
+    
 
     return (
         <div className='calculateArea'>
@@ -32,17 +37,17 @@ const Calculation = () => {
                     <label>Customer Given:
                         <input
                             type='text'
-                            value={val}
+                            value={undefined}
                             placeholder='Enter Amount'
                             onChange={(e) =>
                                 setValue(() => (e.target.value))
                             }
                         />
                     </label>
-                    <Button variant="warning" onClick={checkValue}>Check Now</Button>
+                    <Button variant="warning" onClick={reset}>Reset</Button>
                     <div className='returnValue'>
-                        {returnValue && productPrice < val ? <label>Amount to Return: <span> {returnValue}</span> </label> : null}
-                        {returnValue && productPrice > val ? <p style={{fontSize: 20}}> give more money &#128515;</p> : null}
+                        {productPrice <= val ? <label>Amount to Return: <span> {returnValue} </span> </label> : null }
+                        {productPrice > val && val !== '' && productPrice !== val ? <p style={{fontSize: 20}}> Give more money &#128515;</p> : null}
                     </div>
                     
                 </div>

@@ -12,6 +12,7 @@ const productListSlice = createSlice({
     initialState: {
         products: [],
         loading: false,
+        selectedProduct: []
     },
     extraReducers:  (builder) => {
         builder.addCase(getProducts.pending, (state) => {
@@ -27,7 +28,7 @@ const productListSlice = createSlice({
     },
     reducers: {
         selectedProduct: (state, action) => {
-            state.selectedProduct = action.payload
+            state.selectedProduct.push(action.payload);
           }
       },
 });
