@@ -2,7 +2,7 @@
 
 [<img alt="Kshiteej Jain on Linkedin" width="180" src="https://user-images.githubusercontent.com/10721667/213983686-6f6b2612-41b7-4c48-a4be-d62c44302412.svg" />](https://www.linkedin.com/in/kshiteejjain/)
 
-# React + Redux Toolkit
+# React + Redux Toolkit + React Bootstrap
 This is the POC project where you can select your product from left side product list and enter what customer given the amount and based on that how much amount you need to return with auto calculation.
 
 
@@ -12,6 +12,7 @@ This is the POC project where you can select your product from left side product
  - Redux Toolkit
  - createAsyncThunk
  - API Integration
+ - React Bootstrap
 
 
 
